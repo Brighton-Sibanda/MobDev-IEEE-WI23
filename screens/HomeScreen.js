@@ -19,6 +19,18 @@ const HomeScreen = () => {
     <View style={styles.mainContainer}>
 
       <View style={styles.titleContainer}>
+      <TouchableOpacity 
+            style={styles.menuButton}
+            onPress={incrementCount}
+            activeOpacity={0.8}/>
+      <TouchableOpacity 
+            style={styles.menuButton}
+            onPress={incrementCount}
+            activeOpacity={0.8}/>
+      <TouchableOpacity 
+            style={styles.menuButton}
+            onPress={incrementCount}
+            activeOpacity={0.8}/>
         <Text style={styles.welcomeMessage}>Welcome, Jane!</Text>
         <Text style= {styles.dashboardTitle}>Your Dashboard</Text>
         <Text style= {styles.dateHere}>{currentDate}</Text>
@@ -26,16 +38,24 @@ const HomeScreen = () => {
             style={styles.notificationStatusButton}
             onPress={incrementCount}
             activeOpacity={0.8}>
-            <Text></Text>
+            <Text style={styles.notifyText}>15 Notifications</Text>
         </TouchableOpacity>
+        <Text style={styles.notificationText}>Today's Notifications</Text>
       </View>
-      <View style={styles.instagramHomeContainer}>
-        <Image style={styles.instagramHome}
+      <View style={styles.dashboardHomeContainer}>
+        <View style={styles.appDashViewig}><Image style={styles.instagramHome}
                resizeMode="contain" 
                source={require('../Instagram_logo.png')}>
-               </Image>
+               </Image></View>
+        <View style={styles.appDashViewem}><Image style={styles.emailHome}
+               resizeMode="contain" 
+               source={require('../gmail.png')}>
+               </Image></View>
+        <View style={styles.appDashViewms}><Image style={styles.messageHome}
+               resizeMode="contain" 
+               source={require('../messages_logo.png')}>
+               </Image></View>
       </View>
-
     </View>
   )
 }
@@ -46,24 +66,30 @@ const styles = StyleSheet.create({
   
   mainContainer: {
     flex: 1,
-    //alignItems: 'center',
     justifyContent: 'center',
+  },
+  menuButton: {
+    backgroundColor: 'grey',
+    width: 20,
+    height: 2,
+    paddingBottom: 5,
+    justifyContent: 'right',
+    marginLeft: 330,
+    marginBottom: 4,
   },
 
   titleContainer: {
     flex: 1,
     alignItems: 'flex-start',
-    //justifyContent: 'flex-end',
     paddingTop: 50,
     paddingLeft: 25,
     marginTop: 0,
+    paddingBottom:10
   },
 
   welcomeMessage: {
     fontSize: 21,
-    //fontWeight: 'bold',
     marginBottom: 10,
-    //color: '#C3B091',
     color: 'grey',
   },
 
@@ -92,30 +118,71 @@ const styles = StyleSheet.create({
     marginVertical: 10,
     width: 340,
     borderRadius: 25,
+    paddingBottom: 25,
+    alignItems: 'center',
+  },
+  notificationText:{
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingLeft: 30,
+  },
+  notifyText: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    paddingTop: 40,
   },
 
-  instagramHomeContainer: {
+ dashboardHomeContainer: {
     flex: 1,
-    //alignItems: 'center',
-    //justifyContent: 'center',
-    marginTop: 20,
+    alignItems: 'center',
     width: 350,
-    height: 2000,
+    height: 2500,
     color: 'blue',
     backgroundColor: '#F3E7E4',
     marginLeft: 20,
-    marginBottom: 20,
+    marginBottom: 50,
     borderRadius: 25,
   },
-
   instagramHome: {
     flex: 1,
     position: 'absolute',
-    top: '50%',
-    left: '10%',
-    width: 20,
-    height: 20,
-    //marginTop: -100,
-    //marginLeft: -100,
+    width: '100%',
+    height: '100%',
+  },
+  messageHome: {
+    flex: 1,
+    position: 'absolute',
+    width:'100%',
+    height: '100%',
+  },
+  emailHome: {
+    flex: 1,
+    position: 'absolute',
+    width:'100%',
+    height: '100%',
+  },
+  appDashViewem:{
+    marginTop: 50,
+    backgroundColor: '#F3E7E4',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 60,
+    width: 80,
+  },
+  appDashViewig:{
+    marginTop: 10,
+    backgroundColor: '#F3E7E4',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 70,
+    width: 80,
+  },
+  appDashViewms:{
+    marginTop: 40,
+    backgroundColor: '#F3E7E4',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 90,
+    width: 90,
   },
 })
