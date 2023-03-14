@@ -1,8 +1,9 @@
 import React, {useState} from 'react'
 import { StyleSheet, Text, View, Image, TouchableOpacity,div } from 'react-native'
+import {useNavigation} from '@react-navigation/native'; // here
 
 const HomeScreen = () => {
-
+  const navigation = useNavigation(); // here 
     const options = {
         weekday: 'long',
         month: 'short',
@@ -19,9 +20,9 @@ const HomeScreen = () => {
     <View style={styles.mainContainer}>
 
       <View style={styles.titleContainer}>
-      <TouchableOpacity 
+      <TouchableOpacity
             style={styles.menuButton}
-            onPress={incrementCount}
+            onPress={() => navigation.navigate('Signup')} // here
             activeOpacity={0.8}/>
       <TouchableOpacity 
             style={styles.menuButton}
@@ -42,7 +43,7 @@ const HomeScreen = () => {
         </TouchableOpacity>
         <Text style={styles.notificationText}>Today's Notifications</Text>
       </View>
-      <View style={styles.dashboardHomeContainer}>
+      <View style={styles.dashboardHomeContainer}> 
         <View style={styles.appDashViewig}><Image style={styles.instagramHome}
                resizeMode="contain" 
                source={require('../Instagram_logo.png')}>
