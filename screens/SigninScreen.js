@@ -1,8 +1,9 @@
 import React, {useState} from 'react'
 import {KeyboardAvoidingView, StyleSheet, Text, View, TextInput, TouchableOpacity, Pressable} from 'react-native'
-// import {Routes, Route, useNavigate} from 'react-router-dom'
+import {useNavigation} from '@react-navigation/native';
 
 const SigninScreen = () => {
+    const navigation = useNavigation(); 
     const options = {
         weekday: 'long',
         month: 'short',
@@ -17,11 +18,11 @@ const SigninScreen = () => {
     // PLACEHOLDER FUNCTION FOR TEXT INPUT
     const [value, onChangeText] = React.useState('');
 
-    let navigate = useNavigate(); 
-    const routeChange = () =>{ 
-    let path = `./screens/SignupScreen`; 
-    navigate(path);
-  }
+//     let navigate = useNavigate(); 
+//     const routeChange = () =>{ 
+//     let path = `./screens/SignupScreen`; 
+//     navigate(path);
+//   }
 
 
   return (
@@ -43,20 +44,10 @@ const SigninScreen = () => {
                 <Text style={styles.signintext}>Sign In</Text>
             </Pressable>
 
-            {/* <Button color="primary" className="px-4" */}
-            <Pressable
-                style = {({ pressed }) => [
-                    styles.signupcontainer,
-                    pressed && {opacity: 0.5 },
-                ]}
-                onPress={incrementCount}>
+            <TouchableOpacity
+                style={styles.signupcontainer}
+                onPress={() => navigation.navigate('Signup')}/>
                 <Text style={styles.signuptext}>Sign Up</Text>
-
-            {/* //     onClick={routeChange}
-            //     >
-            //     Sign Up
-            // </Button>  */}
-            </Pressable>
             
             <Text style={styles.emailtext}>Email </Text>
 
@@ -96,14 +87,10 @@ const SigninScreen = () => {
                 />
             </View>
 
-            <Pressable 
-                style = {({ pressed }) => [
-                    styles.loginbutton,
-                    pressed && {opacity: 0.5 },
-                ]}
-                onPress={incrementCount}>
-                <Text style={styles.signintext}>Sign In</Text>
-            </Pressable>
+            <TouchableOpacity 
+                style={styles.loginbutton}
+                onPress={() => navigation.navigate('Home')}/>
+                <Text style={styles.logintext}>Login</Text>
 
         </KeyboardAvoidingView>
     )
@@ -173,7 +160,7 @@ const styles = StyleSheet.create({
 
       signuptext: {
         width: '52%',
-        top: "30%",
+        bottom: 275,
         height: 150,
         fontSize: 25,
         left: "25%", 
@@ -209,6 +196,17 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: '#000000',
         borderRadius: 30
-      }
+      },
+
+      logintext: {
+        width: '52%',
+        top: '2%',
+        height: 150,
+        fontSize: 30,
+        fontWeight: 'bold',
+        alignItems: 'center',
+        textAlign: 'center',
+        color: 'black'
+      },
 })
 

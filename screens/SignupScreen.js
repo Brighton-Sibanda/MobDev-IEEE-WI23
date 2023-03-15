@@ -1,7 +1,9 @@
 import React, {useState} from 'react'
 import {KeyboardAvoidingView, StyleSheet, Text, View, TextInput, TouchableOpacity, Pressable} from 'react-native'
+import {useNavigation} from '@react-navigation/native';
 
 const SignupScreen = () => {
+    const navigation = useNavigation();
     const options = {
         weekday: 'long',
         month: 'short',
@@ -27,14 +29,10 @@ const SignupScreen = () => {
                 </View>
             </View>
 
-            <Pressable 
-                style = {({ pressed }) => [
-                    styles.signincontainer,
-                    pressed && {opacity: 0.5 },
-                ]}
-                onPress={incrementCount}>
+            <TouchableOpacity 
+                style={styles.signincontainer}
+                onPress={() => navigation.navigate('Signin')}/>
                 <Text style={styles.signintext}>Sign In</Text>
-            </Pressable>
 
             <Pressable 
                 style = {({ pressed }) => [
@@ -150,14 +148,10 @@ const SignupScreen = () => {
                 />
             </View>
 
-            <Pressable 
-                style = {({ pressed }) => [
-                    styles.connectbutton,
-                    pressed && {opacity: 0.5 },
-                ]}
-                onPress={incrementCount}>
-                <Text style={styles.signintext}>Connect</Text>
-            </Pressable>
+            <TouchableOpacity 
+                style={styles.connectbutton}
+                onPress={() => navigation.navigate('Home')}/>
+                <Text style={styles.logintext}>Connect</Text>
 
         </KeyboardAvoidingView>
     )
@@ -215,10 +209,10 @@ const styles = StyleSheet.create({
 
       signintext: {
         width: '50%',
-        top: "30%",
+        bottom: 320,
+        right: '25%',
         height: 150,
         fontSize: 25,
-        left: "25%", 
         fontWeight: 'bold',
         alignItems: 'center',
         textAlign: 'center',
@@ -291,6 +285,17 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: '#000000',
         borderRadius: 30
-      }
+      },
+
+      logintext: {
+        width: '52%',
+        top: '5%',
+        height: 150,
+        fontSize: 30,
+        fontWeight: 'bold',
+        alignItems: 'center',
+        textAlign: 'center',
+        color: 'black'
+      },
 })
 
