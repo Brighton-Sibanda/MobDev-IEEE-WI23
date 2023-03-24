@@ -22,7 +22,7 @@ const HomeScreen = () => {
       <View style={styles.titleContainer}>
       <TouchableOpacity
             style={styles.menuButton}
-            onPress={() => navigation.navigate('Signup')} // here
+            onPress={() => navigation.navigate('App')} // here
             activeOpacity={0.8}/>
       <TouchableOpacity 
             style={styles.menuButton}
@@ -44,18 +44,18 @@ const HomeScreen = () => {
         <Text style={styles.notificationText}>Today's Notifications</Text>
       </View>
       <View style={styles.dashboardHomeContainer}> 
-        <View style={styles.appDashViewig}><Image style={styles.instagramHome}
+        <TouchableOpacity style={styles.appDashViewig}><Image style={styles.instagramHome}
                resizeMode="contain" 
                source={require('../Instagram_logo.png')}>
-               </Image></View>
-        <View style={styles.appDashViewem}><Image style={styles.emailHome}
+               </Image></TouchableOpacity>
+        <TouchableOpacity style={styles.appDashViewem}><Image style={styles.emailHome}
                resizeMode="contain" 
                source={require('../gmail.png')}>
-               </Image></View>
-        <View style={styles.appDashViewms}><Image style={styles.messageHome}
+               </Image></TouchableOpacity>
+        <TouchableOpacity style={styles.appDashViewms}><Image style={styles.messageHome}
                resizeMode="contain" 
                source={require('../messages_logo.png')}>
-               </Image></View>
+               </Image></TouchableOpacity>
       </View>
     </View>
   )
