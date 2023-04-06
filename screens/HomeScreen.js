@@ -48,7 +48,7 @@ const HomeScreen = () => {
                resizeMode="contain" 
                source={require('../Instagram_logo.png')}>
                </Image></TouchableOpacity>
-        <TouchableOpacity style={styles.appDashViewem}><Image style={styles.emailHome}
+        <TouchableOpacity style={styles.appDashViewem} onPress={() => navigation.navigate('App')}><Image style={styles.emailHome}
                resizeMode="contain" 
                source={require('../gmail.png')}>
                </Image></TouchableOpacity>

@@ -31,15 +31,15 @@ const SignupScreen = () => {
 
             <TouchableOpacity 
                 style={styles.signincontainer}
-                onPress={() => navigation.navigate('Signin')}/>
-                <Text style={styles.signintext}>Sign In</Text>
+                onPress={() => navigation.navigate("Signin")}>
+                <Text style={styles.signintext}>Sign In</Text></TouchableOpacity>
 
             <Pressable 
                 style = {({ pressed }) => [
                     styles.signupcontainer,
                     pressed && {opacity: 0.5 },
                 ]}
-                onPress={incrementCount}>
+                onPress={() => navigation.navigate("Signup")}>
                 <Text style={styles.signuptext}>Sign Up</Text>
             </Pressable>
             
@@ -150,8 +150,8 @@ const SignupScreen = () => {
 
             <TouchableOpacity 
                 style={styles.connectbutton}
-                onPress={() => navigation.navigate('Home')}/>
-                <Text style={styles.logintext}>Connect</Text>
+                onPress={() => navigation.navigate('Signin')}>
+                <Text style={styles.logintext}>Connect</Text></TouchableOpacity>
 
         </KeyboardAvoidingView>
     )
@@ -209,9 +209,10 @@ const styles = StyleSheet.create({
 
       signintext: {
         width: '50%',
-        bottom: 320,
-        right: '25%',
-        height: 150,
+        //bottom: 320,
+        left: '20%',
+        //height: 150,
+        top: '30%',
         fontSize: 25,
         fontWeight: 'bold',
         alignItems: 'center',
@@ -289,7 +290,8 @@ const styles = StyleSheet.create({
 
       logintext: {
         width: '52%',
-        top: '5%',
+        top: '20%',
+        left: '20%',
         height: 150,
         fontSize: 30,
         fontWeight: 'bold',

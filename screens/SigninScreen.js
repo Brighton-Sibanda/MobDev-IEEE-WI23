@@ -40,14 +40,14 @@ const SigninScreen = () => {
                     styles.signincontainer,
                     pressed && {opacity: 0.5 },
                 ]}
-                onPress={incrementCount}>
+                onPress={() => navigation.navigate('Signin')}>
                 <Text style={styles.signintext}>Sign In</Text>
             </Pressable>
 
             <TouchableOpacity
                 style={styles.signupcontainer}
-                onPress={() => navigation.navigate('Signup')}/>
-                <Text style={styles.signuptext}>Sign Up</Text>
+                onPress={() => navigation.navigate('Signup')}>
+                <Text style={styles.signuptext}>Sign Up</Text></TouchableOpacity>
             
             <Text style={styles.emailtext}>Email </Text>
 
@@ -89,8 +89,8 @@ const SigninScreen = () => {
 
             <TouchableOpacity 
                 style={styles.loginbutton}
-                onPress={() => navigation.navigate('Home')}/>
-                <Text style={styles.logintext}>Login</Text>
+                onPress={() => navigation.navigate('Home')}>
+                <Text style={styles.logintext}>Login</Text></TouchableOpacity>
 
         </KeyboardAvoidingView>
     )
@@ -160,8 +160,8 @@ const styles = StyleSheet.create({
 
       signuptext: {
         width: '52%',
-        bottom: 275,
-        height: 150,
+        top: '30%',
+        //height: 150,
         fontSize: 25,
         left: "25%", 
         fontWeight: 'bold',
@@ -176,6 +176,7 @@ const styles = StyleSheet.create({
         fontSize: 24,
         paddingRight: "58%",
         fontWeight: 'bold',
+        paddingBottom: 20,
       },
 
       passwordtext: {
@@ -200,7 +201,8 @@ const styles = StyleSheet.create({
 
       logintext: {
         width: '52%',
-        top: '2%',
+        top: '20%',
+        left: '20%',
         height: 150,
         fontSize: 30,
         fontWeight: 'bold',
