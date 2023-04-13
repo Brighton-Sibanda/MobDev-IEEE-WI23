@@ -16,7 +16,11 @@ const SignupScreen = () => {
     setCount(count + 1);}; //
     
     // PLACEHOLDER FUNCTION FOR TEXT INPUT
-    const [value, onChangeText] = React.useState('');
+    const [text3, onChangeText3] = React.useState('');
+    const [text4, onChangeText4] = React.useState('');
+    const [text5, onChangeText5] = React.useState('');
+    const [text6, onChangeText6] = React.useState('');
+    const [text7, onChangeText7] = React.useState('');
 
 
   return (
@@ -56,8 +60,8 @@ const SignupScreen = () => {
                 <TextInput
                     editable
                     maxLength={40}
-                    onChangeText={text => onChangeText(text)}
-                    value={value}
+                    onChangeText={text => onChangeText3(text)}
+                    value={text3}
                     style={{padding: 10}}
                     width={310}
                     height={30}
@@ -77,8 +81,8 @@ const SignupScreen = () => {
                 <TextInput
                     editable
                     maxLength={40}
-                    onChangeText={text => onChangeText(text)}
-                    value={value}
+                    onChangeText={text => onChangeText4(text)}
+                    value={text4}
                     style={{padding: 10}}
                     width={310}
                     height={30}
@@ -98,8 +102,8 @@ const SignupScreen = () => {
                 <TextInput
                     editable
                     maxLength={40}
-                    onChangeText={text => onChangeText(text)}
-                    value={value}
+                    onChangeText={text => onChangeText5(text)}
+                    value={text5}
                     style={{padding: 10}}
                     width={310}
                     height={30}
@@ -119,8 +123,8 @@ const SignupScreen = () => {
                 <TextInput
                     editable
                     maxLength={40}
-                    onChangeText={text => onChangeText(text)}
-                    value={value}
+                    onChangeText={text => onChangeText6(text)}
+                    value={text6}
                     style={{padding: 10}}
                     width={310}
                     height={30}
@@ -140,8 +144,8 @@ const SignupScreen = () => {
                 <TextInput
                     editable
                     maxLength={40}
-                    onChangeText={text => onChangeText(text)}
-                    value={value}
+                    onChangeText={text => onChangeText7(text)}
+                    value={text7}
                     style={{padding: 10}}
                     width={310}
                     height={30}
