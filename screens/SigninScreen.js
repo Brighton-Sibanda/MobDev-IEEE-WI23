@@ -16,14 +16,8 @@ const SigninScreen = () => {
     setCount(count + 1);}; //
     
     // PLACEHOLDER FUNCTION FOR TEXT INPUT
-    const [value, onChangeText] = React.useState('');
-
-//     let navigate = useNavigate(); 
-//     const routeChange = () =>{ 
-//     let path = `./screens/SignupScreen`; 
-//     navigate(path);
-//   }
-
+    const [text1, onChangeText1] = React.useState('');
+    const [text2, onChangeText2] = React.useState('');
 
   return (
         <KeyboardAvoidingView
@@ -63,8 +57,8 @@ const SigninScreen = () => {
                 <TextInput
                     editable
                     maxLength={40}
-                    onChangeText={text => onChangeText(text)}
-                    value={value}
+                    onChangeText={text => onChangeText1(text)}
+                    value={text1}
                     style={{padding: 10}}
                     width={300}
                 />
@@ -80,8 +74,8 @@ const SigninScreen = () => {
                 <TextInput
                     editable
                     maxLength={40}
-                    onChangeText={text => onChangeText(text)}
-                    value={value}
+                    onChangeText={text => onChangeText2(text)}
+                    value={text2}
                     style={{padding: 10}}
                     width={300}
                 />
