@@ -27,11 +27,10 @@ const SignupScreen = () => {
         <KeyboardAvoidingView
         style={styles.container}
         behavior = "padding">
-            <View style = {styles.container}>
+            <View>
                 <Text style={styles.titletext}>Table It</Text>
                 <View style={styles.logorectangle}>
                 </View>
-            </View>
 
             <TouchableOpacity 
                 style={styles.signincontainer}
@@ -49,113 +48,62 @@ const SignupScreen = () => {
             
             <Text style={styles.firstname}>First Name </Text>
 
-            <View
-                style={{
-                    position: 'absolute',
-                    top: 380,
-                    left: 50,
-                    borderColor: '#000000',
-                    borderWidth: 1,
-                }}>
-                <TextInput
-                    editable
-                    maxLength={40}
-                    onChangeText={text => onChangeText3(text)}
-                    value={text3}
-                    style={{padding: 10}}
-                    width={310}
-                    height={30}
+            <TextInput
+                editable
+                maxLength={40}
+                onChangeText={text => onChangeText3(text)}
+                placeholder="first name"
+                value={text3}
+                style={styles.textinput3}
+                width={310}
+                height={30}
                 />
-            </View>
 
             <Text style={styles.lastname}>Last Name </Text>
 
-            <View
-                style={{
-                    position: 'absolute',
-                    top: 465,
-                    left: 50,
-                    borderColor: '#000000',
-                    borderWidth: 1,
-                }}>
-                <TextInput
-                    editable
-                    maxLength={40}
-                    onChangeText={text => onChangeText4(text)}
-                    value={text4}
-                    style={{padding: 10}}
-                    width={310}
-                    height={30}
+            <TextInput
+                editable
+                maxLength={40}
+                onChangeText={text => onChangeText4(text)}
+                placeholder="last name"
+                value={text4}
+                style={styles.textinput4}
+                width={310}
+                height={30}
                 />
-            </View>
 
             <Text style={styles.emailtext}>Email </Text>
 
-            <View
-                style={{
-                    position: 'absolute',
-                    top: 545,
-                    left: 50,
-                    borderColor: '#000000',
-                    borderWidth: 1,
-                }}>
-                <TextInput
-                    editable
-                    maxLength={40}
-                    onChangeText={text => onChangeText5(text)}
-                    value={text5}
-                    style={{padding: 10}}
-                    width={310}
-                    height={30}
+            <TextInput
+                editable
+                maxLength={40}
+                onChangeText={text => onChangeText5(text)}
+                placeholder="email"
+                value={text5}
+                style={styles.textinput5}
+                width={310}
+                height={30}
                 />
-            </View>
 
             <Text style={styles.passwordtext}>Password </Text>
 
-            <View
-                style={{
-                    position: 'absolute',
-                    top: 630,
-                    left: 50,
-                    borderColor: '#000000',
-                    borderWidth: 1,
-                }}>
-                <TextInput
-                    editable
-                    maxLength={40}
-                    onChangeText={text => onChangeText6(text)}
-                    value={text6}
-                    style={{padding: 10}}
-                    width={310}
-                    height={30}
+            <TextInput
+                editable
+                maxLength={40}
+                onChangeText={text => onChangeText6(text)}
+                placeholder="password"
+                value={text6}
+                style={styles.textinput6}
+                width={310}
+                height={30}
                 />
-            </View>
 
-            <Text style={styles.confirmpasswordtext}>Confirm Password </Text>
-            
-            <View
-                style={{
-                    position: 'absolute',
-                    top: 715,
-                    left: 50,
-                    borderColor: '#000000',
-                    borderWidth: 1,
-                }}>
-                <TextInput
-                    editable
-                    maxLength={40}
-                    onChangeText={text => onChangeText7(text)}
-                    value={text7}
-                    style={{padding: 10}}
-                    width={310}
-                    height={30}
-                />
-            </View>
 
             <TouchableOpacity 
                 style={styles.connectbutton}
                 onPress={() => navigation.navigate('Signin')}>
                 <Text style={styles.logintext}>Connect</Text></TouchableOpacity>
+            </View>
 
         </KeyboardAvoidingView>
     )
@@ -174,17 +122,22 @@ const styles = StyleSheet.create({
     logorectangle: {
         position: 'absolute',
         width: '100%',
-        height: 250,
-        top: 0,
+        height: 300,
         backgroundColor: '#e5d2ba',
-        opacity: 0.3
+        opacity: 0.3,
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        left: -200,
+        top: -450,
     },
     
     titletext: {
         position: 'absolute',
         width: 315,
         height: 150,
-        top: 100,
+        top: -325,
+        left: -170,
         // fontFamily: 'Lexend',
         fontSize: 64,
         fontWeight: 'bold',
@@ -197,8 +150,8 @@ const styles = StyleSheet.create({
         position: 'absolute',
         width: '50.5%',
         height: 80,
-        left: 0,
-        top: 250,
+        right: 0,
+        top: -150,
         backgroundColor: '#0000001a',
       },
 
@@ -206,16 +159,14 @@ const styles = StyleSheet.create({
         position: 'absolute',
         width: '50.5%',
         height: 80,
-        right: 0,
-        top: 250,
+        left: 0,
+        top: -150,
         backgroundColor: '#0000001a',
       },
 
       signintext: {
         width: '50%',
-        //bottom: 320,
-        left: '20%',
-        //height: 150,
+        left: '25%',
         top: '30%',
         fontSize: 25,
         fontWeight: 'bold',
@@ -229,7 +180,7 @@ const styles = StyleSheet.create({
         top: "30%",
         height: 150,
         fontSize: 25,
-        left: "25%", 
+        left: "20%", 
         fontWeight: 'bold',
         alignItems: 'center',
         textAlign: 'center',
@@ -240,8 +191,8 @@ const styles = StyleSheet.create({
         position: 'absolute',
         flex: 1,
         fontSize: 20,
-        top: 350,
-        left: 50,
+        top: -50,
+        left: -160,
         fontWeight: 'bold',
       },
 
@@ -249,8 +200,8 @@ const styles = StyleSheet.create({
         position: 'absolute',
         flex: 1,
         fontSize: 20,
-        top: 435,
-        left: 50,
+        top: 35,
+        left: -160,
         fontWeight: 'bold',
       },
 
@@ -258,8 +209,8 @@ const styles = StyleSheet.create({
         position: 'absolute',
         flex: 1,
         fontSize: 20,
-        top: 515,
-        left: 50,
+        top: 115,
+        left: -160,
         fontWeight: 'bold',
       },
 
@@ -267,8 +218,8 @@ const styles = StyleSheet.create({
         position: 'absolute',
         flex: 1,
         fontSize: 20,
-        top: 595,
-        left: 50,
+        top: 195,
+        left: -160,
         fontWeight: 'bold',
       },
 
@@ -276,8 +227,8 @@ const styles = StyleSheet.create({
         position: 'absolute',
         flex: 1,
         fontSize: 20,
-        top: 680,
-        left: 50,
+        top: 275,
+        left: -160,
         fontWeight: 'bold',
       },
 
@@ -285,7 +236,8 @@ const styles = StyleSheet.create({
         position: 'absolute',
         width: 320,
         height: 70,
-        bottom: 50,
+        top: 300,
+        left: -160,
         backgroundColor: '#e5d2ba52',
         borderWidth: 1,
         borderColor: '#000000',
@@ -295,7 +247,7 @@ const styles = StyleSheet.create({
       logintext: {
         width: '52%',
         top: '20%',
-        left: '20%',
+        left: '25%',
         height: 150,
         fontSize: 30,
         fontWeight: 'bold',
@@ -303,5 +255,52 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         color: 'black'
       },
+
+      textinput3: {
+        position: 'absolute',
+        top: -20,
+        left: -165,
+        borderColor: '#000000',
+        borderWidth: 1,
+        padding: 10
+      },
+
+      textinput4: {
+        position: 'absolute',
+        top: 65,
+        left: -165,
+        borderColor: '#000000',
+        borderWidth: 1,
+        padding: 10
+      },
+
+      textinput5: {
+        position: 'absolute',
+        top: 145,
+        left: -165,
+        borderColor: '#000000',
+        borderWidth: 1,
+        padding: 10
+      },
+
+      textinput6: {
+        position: 'absolute',
+        top: 230,
+        left: -165,
+        borderColor: '#000000',
+        borderWidth: 1,
+        padding: 10
+      },
+
+      textinput7: {
+        position: 'absolute',
+        top: 310,
+        left: -165,
+        borderColor: '#000000',
+        borderWidth: 1,
+        padding: 10
+      }
+
+
 })
 

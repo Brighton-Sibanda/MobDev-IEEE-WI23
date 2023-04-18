@@ -23,11 +23,29 @@ const SigninScreen = () => {
         <KeyboardAvoidingView
         style={styles.container}
         behavior = "padding">
-            <View style = {styles.container}>
-                <Text style={styles.titletext}>Table It</Text>
+          <View>
+            <Text style={styles.titletext}>Table It</Text>
                 <View style={styles.logorectangle}>
                 </View>
-            </View>
+          
+            <TextInput
+                editable
+                maxLength={40}
+                onChangeText={text => onChangeText1(text)}
+                placeholder="email"
+                value={text1}
+                style={styles.textinput1}
+                width={300}
+                />
+            <TextInput
+                editable
+                maxLength={40}
+                onChangeText={text => onChangeText2(text)}
+                placeholder="password"
+                value={text2}
+                style={styles.textinput2}
+                width={300}
+                 />
 
             <Pressable 
                 style = {({ pressed }) => [
@@ -47,44 +65,13 @@ const SigninScreen = () => {
 
             <Text style={styles.passwordtext}>Password </Text>
 
-            <View
-                style={{
-                    position: 'absolute',
-                    bottom: 375,
-                    borderColor: '#000000',
-                    borderWidth: 1,
-                }}>
-                <TextInput
-                    editable
-                    maxLength={40}
-                    onChangeText={text => onChangeText1(text)}
-                    value={text1}
-                    style={{padding: 10}}
-                    width={300}
-                />
-            </View>
-
-            <View
-                style={{
-                    position: 'absolute',
-                    bottom: 230,
-                    borderColor: '#000000',
-                    borderWidth: 1,
-                }}>
-                <TextInput
-                    editable
-                    maxLength={40}
-                    onChangeText={text => onChangeText2(text)}
-                    value={text2}
-                    style={{padding: 10}}
-                    width={300}
-                />
-            </View>
-
+          
             <TouchableOpacity 
                 style={styles.loginbutton}
                 onPress={() => navigation.navigate('Home')}>
                 <Text style={styles.logintext}>Login</Text></TouchableOpacity>
+          </View>
+          
 
         </KeyboardAvoidingView>
     )
@@ -101,10 +88,14 @@ const styles = StyleSheet.create({
     },
       
     logorectangle: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
         position: 'absolute',
         width: '100%',
         height: 300,
-        top: 0,
+        left: -200,
+        top: -450,
         backgroundColor: '#e5d2ba',
         opacity: 0.3
     },
@@ -113,8 +104,8 @@ const styles = StyleSheet.create({
         position: 'absolute',
         width: 315,
         height: 150,
-        top: 100,
-        // fontFamily: 'Lexend',
+        top: -350,
+        left: -170,
         fontSize: 64,
         fontWeight: 'bold',
         alignItems: 'center',
@@ -126,8 +117,8 @@ const styles = StyleSheet.create({
         position: 'absolute',
         width: '50.5%',
         height: 80,
-        left: 0,
-        top: 300,
+        right: 0,
+        top: -150,
         backgroundColor: '#0000001a',
       },
 
@@ -135,8 +126,8 @@ const styles = StyleSheet.create({
         position: 'absolute',
         width: '50.5%',
         height: 80,
-        right: 0,
-        top: 300,
+        left: 0,
+        top: -150,
         backgroundColor: '#0000001a',
       },
 
@@ -171,26 +162,35 @@ const styles = StyleSheet.create({
         paddingRight: "58%",
         fontWeight: 'bold',
         paddingBottom: 20,
+        left: -165,
+        bottom: -20
       },
 
       passwordtext: {
         position: 'absolute',
         flex: 1,
         fontSize: 24,
-        bottom: 290,
+        bottom: -145,
         paddingRight: "45%",
         fontWeight: 'bold',
+        left:-165
       },
 
       loginbutton: {
         position: 'absolute',
         width: 320,
         height: 75,
-        bottom: 75,
+        bottom: -360,
         backgroundColor: '#e5d2ba52',
         borderWidth: 1,
         borderColor: '#000000',
-        borderRadius: 30
+        borderRadius: 30,
+        left: -165
+      },
+
+      scroll: {
+        flex: 1,
+        paddingHorizontal: 20,
       },
 
       logintext: {
@@ -204,5 +204,23 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         color: 'black'
       },
+
+      textinput1: {
+          position: 'absolute',
+          bottom: -60,
+          borderColor: '#000000',
+          borderWidth: 1,
+          padding: 10,
+          left: -165
+      },
+
+      textinput2: {
+        position: 'absolute',
+        bottom: -205,
+        borderColor: '#000000',
+        borderWidth: 1,
+        padding: 10,
+        left: -165
+      }
 })
 
