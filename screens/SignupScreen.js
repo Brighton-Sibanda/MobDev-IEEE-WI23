@@ -26,7 +26,8 @@ const SignupScreen = () => {
   return (
         <KeyboardAvoidingView
         style={styles.container}
-        behavior = "padding">
+        behavior = "padding"
+        keyboardVerticalOffset={Platform.OS === "ios" ? 64 : 0}>
             <View>
                 <Text style={styles.titletext}>Table It</Text>
                 <View style={styles.logorectangle}>
@@ -56,7 +57,6 @@ const SignupScreen = () => {
                 value={text3}
                 style={styles.textinput3}
                 width={310}
-                height={30}
                 />
 
             <Text style={styles.lastname}>Last Name </Text>
@@ -69,7 +69,6 @@ const SignupScreen = () => {
                 value={text4}
                 style={styles.textinput4}
                 width={310}
-                height={30}
                 />
 
             <Text style={styles.emailtext}>Email </Text>
@@ -82,7 +81,6 @@ const SignupScreen = () => {
                 value={text5}
                 style={styles.textinput5}
                 width={310}
-                height={30}
                 />
 
             <Text style={styles.passwordtext}>Password </Text>
@@ -95,7 +93,6 @@ const SignupScreen = () => {
                 value={text6}
                 style={styles.textinput6}
                 width={310}
-                height={30}
                 />
 
 
@@ -200,7 +197,7 @@ const styles = StyleSheet.create({
         position: 'absolute',
         flex: 1,
         fontSize: 20,
-        top: 35,
+        top: 45,
         left: -160,
         fontWeight: 'bold',
       },
@@ -209,7 +206,7 @@ const styles = StyleSheet.create({
         position: 'absolute',
         flex: 1,
         fontSize: 20,
-        top: 115,
+        top: 135,
         left: -160,
         fontWeight: 'bold',
       },
@@ -218,7 +215,7 @@ const styles = StyleSheet.create({
         position: 'absolute',
         flex: 1,
         fontSize: 20,
-        top: 195,
+        top: 225,
         left: -160,
         fontWeight: 'bold',
       },
@@ -236,7 +233,7 @@ const styles = StyleSheet.create({
         position: 'absolute',
         width: 320,
         height: 70,
-        top: 300,
+        top: 320,
         left: -160,
         backgroundColor: '#e5d2ba52',
         borderWidth: 1,
@@ -267,7 +264,7 @@ const styles = StyleSheet.create({
 
       textinput4: {
         position: 'absolute',
-        top: 65,
+        top: 75,
         left: -165,
         borderColor: '#000000',
         borderWidth: 1,
@@ -276,7 +273,7 @@ const styles = StyleSheet.create({
 
       textinput5: {
         position: 'absolute',
-        top: 145,
+        top: 165,
         left: -165,
         borderColor: '#000000',
         borderWidth: 1,
@@ -285,21 +282,13 @@ const styles = StyleSheet.create({
 
       textinput6: {
         position: 'absolute',
-        top: 230,
+        top: 255,
         left: -165,
         borderColor: '#000000',
         borderWidth: 1,
         padding: 10
       },
 
-      textinput7: {
-        position: 'absolute',
-        top: 310,
-        left: -165,
-        borderColor: '#000000',
-        borderWidth: 1,
-        padding: 10
-      }
 
 
 })
