@@ -22,7 +22,7 @@ const HomeScreen = () => {
       <View style={styles.titleContainer}>
       <TouchableOpacity
             style={styles.menuButton}
-            onPress={() => navigation.navigate('App')} // here
+            //onPress={() => navigation.navigate('App')} // here
             activeOpacity={0.8}/>
       <TouchableOpacity 
             style={styles.menuButton}
@@ -126,6 +126,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     paddingLeft: 30,
+    fontSize: 19,
+    paddingTop: 25,
+    paddingLeft: 80,
   },
   notifyText: {
     fontSize: 20,

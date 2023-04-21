@@ -41,7 +41,18 @@ const AppScreen = () => {
                resizeMode="contain" 
                source={require('../gmail.png')}>
                </Image></TouchableOpacity>
+
+
+      <View style={{width: 300, marginBottom: 10}}><Text>3:39pm</Text></View>
+      <TouchableOpacity style={styles.previewMsg}>
+           <Text style={{paddingLeft: 10 }}>@johndoe {"\n"} </Text>
+           <Text style={{paddingLeft: 10 }}>"Hey, I was wondering if..."</Text>
+      </TouchableOpacity>
+
+
+
       </View>
+      
     </View>
   )
 }
@@ -106,5 +117,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     height: 60,
     width: 80,
+    marginBottom: 30,
+    
+  },
+  previewMsg:{
+       backgroundColor: 'white',
+       width: 300,
+       height: 50,
+       borderRadius: 15,
+       fontSize: 15,
+
   },
 })
