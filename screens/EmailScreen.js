@@ -39,7 +39,7 @@ const AppScreen = () => {
       <View style={styles.dashboardHomeContainer}> 
         <TouchableOpacity style={styles.appDashViewem}><Image style={styles.emailHome}
                resizeMode="contain" 
-               source={require('../gmail.png')}>
+               source={require('../gmail1notif.png')}>
                </Image></TouchableOpacity>
 
 <ScrollView style={{height: 300, width: 600, marginLeft: 300}}>
@@ -139,6 +139,8 @@ const styles = StyleSheet.create({
     position: 'absolute',
     width:'100%',
     height: '100%',
+    height: 100,
+    width: 90
   },
   appDashViewem:{
     marginTop: -25,
