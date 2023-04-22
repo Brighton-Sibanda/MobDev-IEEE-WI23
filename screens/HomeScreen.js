@@ -50,7 +50,7 @@ const HomeScreen = () => {
                </Image></TouchableOpacity>
         <TouchableOpacity style={styles.appDashViewem} onPress={() => navigation.navigate('Email')}><Image style={styles.emailHome}
                resizeMode="contain" 
-               source={require('../gmail.png')}>
+               source={require('../gmail1notif.png')}>
                </Image></TouchableOpacity>
         <TouchableOpacity style={styles.appDashViewms} onPress={() => navigation.navigate('Message')}><Image style={styles.messageHome}
                resizeMode="contain" 
@@ -164,6 +164,8 @@ const styles = StyleSheet.create({
     position: 'absolute',
     width:'100%',
     height: '100%',
+    height: 100,
+    width: 90
   },
   appDashViewem:{
     marginTop: 50,
