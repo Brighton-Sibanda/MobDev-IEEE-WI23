@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { StyleSheet, Text, View, Image, TouchableOpacity,div } from 'react-native'
+import { StyleSheet, Text, View, Image, TouchableOpacity,div, ScrollView } from 'react-native'
 import {useNavigation} from '@react-navigation/native'; // here
 
 const AppScreen = () => {
@@ -34,22 +34,52 @@ const AppScreen = () => {
             activeOpacity={0.8}/>
         <TouchableOpacity onPress={() => navigation.navigate("Home")} >
             <Text style={styles.dashMessage}>Dashboard</Text></TouchableOpacity>
-        <Text style= {styles.pageTitle}>Email</Text>
+        <Text style= {styles.pageTitle}>Messages</Text>
       </View>
       <View style={styles.dashboardHomeContainer}> 
         <TouchableOpacity style={styles.appDashViewem}><Image style={styles.emailHome}
                resizeMode="contain" 
-               source={require('../gmail.png')}>
+               source={require('../messages_logo.png')}>
                </Image></TouchableOpacity>
 
-
-      <View style={{width: 300, marginBottom: 10}}><Text>3:39pm</Text></View>
+<ScrollView style={{height: 300, width: 600, marginLeft: 300}}>
+<View style={{width: 300, marginBottom: 10}}><Text>3:39pm</Text></View>
       <TouchableOpacity style={styles.previewMsg}>
-           <Text style={{paddingLeft: 10 }}>@johndoe {"\n"} </Text>
+           <Text style={{paddingLeft: 10 }}>Brighton {"\n"} </Text>
+           <Text style={{paddingLeft: 10 }}>"Showase is tomorrow..."</Text>
+      </TouchableOpacity>
+      <View style={{width: 300, marginBottom: 10}}><Text>3:50pm</Text></View>
+      <TouchableOpacity style={styles.previewMsg}>
+           <Text style={{paddingLeft: 10 }}>Emran {"\n"} </Text>
+           <Text style={{paddingLeft: 10 }}>"Happy Eid!!..."</Text>
+      </TouchableOpacity>
+      <View style={{width: 300, marginBottom: 10}}><Text>4:20pm</Text></View>
+      <TouchableOpacity style={styles.previewMsg}>
+           <Text style={{paddingLeft: 10 }}>Audrey {"\n"} </Text>
+           <Text style={{paddingLeft: 10 }}>"does 7-eleven open all day?..."</Text>
+      </TouchableOpacity>
+      <View style={{width: 300, marginBottom: 10}}><Text>4:56pm</Text></View>
+      <TouchableOpacity style={styles.previewMsg}>
+           <Text style={{paddingLeft: 10 }}>Serena hwang {"\n"} </Text>
+           <Text style={{paddingLeft: 10 }}>"dont be mad though..."</Text>
+      </TouchableOpacity>
+      <View style={{width: 300, marginBottom: 10}}><Text>7:13pm</Text></View>
+      <TouchableOpacity style={styles.previewMsg}>
+           <Text style={{paddingLeft: 10 }}>sabrina {"\n"} </Text>
            <Text style={{paddingLeft: 10 }}>"Hey, I was wondering if..."</Text>
       </TouchableOpacity>
+      <View style={{width: 300, marginBottom: 10}}><Text>3:39pm</Text></View>
+      <TouchableOpacity style={styles.previewMsg}>
+           <Text style={{paddingLeft: 10 }}>kante {"\n"} </Text>
+           <Text style={{paddingLeft: 10 }}>"not you gaslighting me..."</Text>
+      </TouchableOpacity>
+      <View style={{width: 300, marginBottom: 10}}><Text></Text></View>
+      <TouchableOpacity style={styles.previewMsg}>
+           <Text style={{paddingLeft: 10 }}>yahya goodvibes {"\n"} </Text>
+           <Text style={{paddingLeft: 10 }}>"couldnt be truer lmao..."</Text>
+      </TouchableOpacity>
 
-
+      </ScrollView>
 
       </View>
       
@@ -126,6 +156,7 @@ const styles = StyleSheet.create({
        height: 50,
        borderRadius: 15,
        fontSize: 15,
+       marginBottom: 10,
 
   },
 })

@@ -44,15 +44,15 @@ const HomeScreen = () => {
         <Text style={styles.notificationText}>Today's Notifications</Text>
       </View>
       <View style={styles.dashboardHomeContainer}> 
-        <TouchableOpacity style={styles.appDashViewig}><Image style={styles.instagramHome}
+        <TouchableOpacity style={styles.appDashViewig} onPress={() => navigation.navigate('Instagram')}><Image style={styles.instagramHome}
                resizeMode="contain" 
                source={require('../Instagram_logo.png')}>
                </Image></TouchableOpacity>
-        <TouchableOpacity style={styles.appDashViewem} onPress={() => navigation.navigate('App')}><Image style={styles.emailHome}
+        <TouchableOpacity style={styles.appDashViewem} onPress={() => navigation.navigate('Email')}><Image style={styles.emailHome}
                resizeMode="contain" 
                source={require('../gmail.png')}>
                </Image></TouchableOpacity>
-        <TouchableOpacity style={styles.appDashViewms}><Image style={styles.messageHome}
+        <TouchableOpacity style={styles.appDashViewms} onPress={() => navigation.navigate('Message')}><Image style={styles.messageHome}
                resizeMode="contain" 
                source={require('../messages_logo.png')}>
                </Image></TouchableOpacity>

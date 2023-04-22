@@ -5,7 +5,9 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import SigninScreen from './screens/SigninScreen';
 import SignupScreen from './screens/SignupScreen';
 import HomeScreen from './screens/HomeScreen';
-import AppScreen from './screens/AppScreen';
+import Email from './screens/EmailScreen';
+import Message from './screens/MessageScreen';
+import Instagram from './screens/InstagramScreen';
 const Stack = createNativeStackNavigator();
 export default function App() {
   return (
@@ -13,8 +15,10 @@ export default function App() {
       <Stack.Navigator>
         <Stack.Screen options = {{ headerShown: false }} name="Signin" component={SigninScreen} />
         <Stack.Screen name= "Home" component={HomeScreen} />
-        <Stack.Screen options = {{ headerShown: false }} name="App" component={AppScreen} />
+        <Stack.Screen options = {{ headerShown: false }} name="Email" component={Email} />
         <Stack.Screen options = {{ headerShown: false }} name="Signup" component={SignupScreen} />
+        <Stack.Screen options = {{ headerShown: false }} name="Instagram" component={Instagram} />
+        <Stack.Screen options = {{ headerShown: false }} name="Message" component={Message} />
       </Stack.Navigator>
     </NavigationContainer>
   );
