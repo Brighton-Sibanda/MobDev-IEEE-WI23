@@ -48,7 +48,7 @@ const AppScreen = () => {
         Hi Omar,{"\n"}{"\n"}
 
         Applications for fall 2023 admissions are {"\n"}live! You are invited to apply to one 
-        of our Masters{"\n"} Programes. 
+        of our Masters{"\n"} Programs. 
         We have chosen you based on your {"\n"}academic
          merits and we think you're a perfect{"\n"} candidate.{"\n"}
 
