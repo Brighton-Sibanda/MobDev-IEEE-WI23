@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {KeyboardAvoidingView, StyleSheet, Text, View, TextInput, TouchableOpacity, Pressable} from 'react-native'
+import {KeyboardAvoidingView, StyleSheet, Text, View, TextInput, TouchableOpacity, Pressable, Image} from 'react-native'
 import {useNavigation} from '@react-navigation/native';
 
 const SignupScreen = () => {
@@ -94,12 +94,16 @@ const SignupScreen = () => {
                 style={styles.textinput6}
                 width={310}
                 />
-
-
             <TouchableOpacity 
                 style={styles.connectbutton}
                 onPress={() => navigation.navigate('Signin')}>
                 <Text style={styles.logintext}>Connect</Text></TouchableOpacity>
+            
+
+            <Image style={styles.tableitlogo2}
+               resizeMode="contain" 
+               source={require('../tableitlogo1.png')}>
+               </Image>
             </View>
 
         </KeyboardAvoidingView>
@@ -133,9 +137,8 @@ const styles = StyleSheet.create({
         position: 'absolute',
         width: 315,
         height: 150,
-        top: -325,
-        left: -170,
-        // fontFamily: 'Lexend',
+        top: -375,
+        left: -160,
         fontSize: 64,
         fontWeight: 'bold',
         alignItems: 'center',
@@ -288,6 +291,17 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         padding: 10
       },
+
+      tableitlogo2: {
+        flex: 1,
+        bottom: 185,
+        right: -50,
+        position: 'absolute',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: 105,
+        width: 105,
+    }
 
 
 

@@ -32,7 +32,7 @@ const HomeScreen = () => {
             style={styles.menuButton}
             onPress={incrementCount}
             activeOpacity={0.8}/>
-        <Text style={styles.welcomeMessage}>Welcome, Jane!</Text>
+        <Text style={styles.welcomeMessage}>Welcome, Omar!</Text>
         <Text style= {styles.dashboardTitle}>Your Dashboard</Text>
         <Text style= {styles.dateHere}>{currentDate}</Text>
         <TouchableOpacity 
