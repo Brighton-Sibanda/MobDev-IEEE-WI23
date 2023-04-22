@@ -32,9 +32,9 @@ const AppScreen = () => {
             style={styles.menuButton}
             onPress={incrementCount}
             activeOpacity={0.8}/>
-        <TouchableOpacity onPress={() => navigation.navigate("Home")} >
-            <Text style={styles.dashMessage}>Dashboard</Text></TouchableOpacity>
-        <Text style= {styles.pageTitle}>Email</Text>
+        <TouchableOpacity onPress={() => navigation.navigate("Email")} >
+            <Text style={styles.dashMessage}>Back</Text></TouchableOpacity>
+        <Text style= {styles.pageTitle}>Purdue</Text>
       </View>
       <View style={styles.dashboardHomeContainer}> 
         <TouchableOpacity style={styles.appDashViewem}><Image style={styles.emailHome}
@@ -43,42 +43,23 @@ const AppScreen = () => {
                </Image></TouchableOpacity>
 
 <ScrollView style={{height: 300, width: 600, marginLeft: 300}}>
-      <View style={{width: 300, marginBottom: 10}}><Text>3:39am</Text></View>
-      <TouchableOpacity style={styles.previewMsg} onPress={() => navigation.navigate("Detail")}>
-           <Text style={{paddingLeft: 10 }}>Purdue University {"\n"} </Text>
-           <Text style={{paddingLeft: 10 }}>"Consider applying to our program..."</Text>
-      </TouchableOpacity>
-      <View style={{width: 300, marginBottom: 10}}><Text>8:26am</Text></View>
-      <TouchableOpacity style={styles.previewMsg}>
-           <Text style={{paddingLeft: 10 }}>Hannah {"\n"} </Text>
-           <Text style={{paddingLeft: 10 }}>"The deadline to apply is approchi..."</Text>
-      </TouchableOpacity>
-      <View style={{width: 300, marginBottom: 10}}><Text>8:50am</Text></View>
-      <TouchableOpacity style={styles.previewMsg}>
-           <Text style={{paddingLeft: 10 }}>McCormick CS Bulletin {"\n"} </Text>
-           <Text style={{paddingLeft: 10 }}>"Northwestern Seminar next week.."</Text>
-      </TouchableOpacity>
-      <View style={{width: 300, marginBottom: 10}}><Text>9:03am</Text></View>
-      <TouchableOpacity style={styles.previewMsg}>
-           <Text style={{paddingLeft: 10 }}>Sarah Sood {"\n"} </Text>
-           <Text style={{paddingLeft: 10 }}>"Hey Omar! i'm excited to learn that..."</Text>
-      </TouchableOpacity>
-      <View style={{width: 300, marginBottom: 10}}><Text>9:10am</Text></View>
-      <TouchableOpacity style={styles.previewMsg}>
-           <Text style={{paddingLeft: 10 }}>Victor Scarz {"\n"} </Text>
-           <Text style={{paddingLeft: 10 }}>"Update on your recent interview..."</Text>
-      </TouchableOpacity>
-      <View style={{width: 300, marginBottom: 10}}><Text>3:10pm</Text></View>
-      <TouchableOpacity style={styles.previewMsg}>
-           <Text style={{paddingLeft: 10 }}>Reece James {"\n"} </Text>
-           <Text style={{paddingLeft: 10 }}>"Hey, Just checking in after our recent..."</Text>
-      </TouchableOpacity>
-      <View style={{width: 300, marginBottom: 10}}><Text>4:50pm</Text></View>
-      <TouchableOpacity style={styles.previewMsg}>
-           <Text style={{paddingLeft: 10 }}>Sara N {"\n"} </Text>
-           <Text style={{paddingLeft: 10 }}>"Omar, do you by any chance..."</Text>
-      </TouchableOpacity>
+      <Text style={{fontWeight:'bold'}}>Purdue University Admissions {"\n"}{"\n"}</Text>
+      <Text>
+        Hi Omar,{"\n"}{"\n"}
 
+        Applications for fall 2023 admissions are {"\n"}live! You are invited to apply to one 
+        of our Masters{"\n"} Programes. 
+        We have chosen you based on your {"\n"}academic
+         merits and we think you're a perfect{"\n"} candidate.{"\n"}
+
+         {"\n"}Looking forward to receiving your application.{"\n"}{"\n"}{"\n"}
+
+        Purdue University Masters Programe{"\n"}
+        Computer Science Department{"\n"}
+        1345 Tork Street{"\n"}
+        West Lafayette
+        Indiana
+      </Text>
       </ScrollView>
 
       </View>

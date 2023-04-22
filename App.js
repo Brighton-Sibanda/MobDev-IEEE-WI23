@@ -8,6 +8,7 @@ import HomeScreen from './screens/HomeScreen';
 import Email from './screens/EmailScreen';
 import Message from './screens/MessageScreen';
 import Instagram from './screens/InstagramScreen';
+import Detail from './screens/DetailScreen';
 const Stack = createNativeStackNavigator();
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
         <Stack.Screen options = {{ headerShown: false }} name="Signup" component={SignupScreen} />
         <Stack.Screen options = {{ headerShown: false }} name="Instagram" component={Instagram} />
         <Stack.Screen options = {{ headerShown: false }} name="Message" component={Message} />
+        <Stack.Screen options = {{ headerShown: false }} name="Detail" component={Detail} />
       </Stack.Navigator>
     </NavigationContainer>
   );
