@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {KeyboardAvoidingView, StyleSheet, Text, View, TextInput, TouchableOpacity, Pressable} from 'react-native'
+import {KeyboardAvoidingView, StyleSheet, Text, View, TextInput, TouchableOpacity, Pressable, Image} from 'react-native'
 import {useNavigation} from '@react-navigation/native';
 
 const SigninScreen = () => {
@@ -70,9 +70,13 @@ const SigninScreen = () => {
                 style={styles.loginbutton}
                 onPress={() => navigation.navigate('Home')}>
                 <Text style={styles.logintext}>Login</Text></TouchableOpacity>
+
+            <Image style={styles.tableitlogo}
+               resizeMode="contain" 
+               source={require('../tableitlogo1.png')}>
+               </Image>
           </View>
           
-
         </KeyboardAvoidingView>
     )
 }
@@ -104,8 +108,8 @@ const styles = StyleSheet.create({
         position: 'absolute',
         width: 315,
         height: 150,
-        top: -350,
-        left: -170,
+        top: -375,
+        left: -160,
         fontSize: 64,
         fontWeight: 'bold',
         alignItems: 'center',
@@ -221,6 +225,18 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         padding: 10,
         left: -165
+      },
+
+      tableitlogo: {
+          flex: 1,
+          bottom: 180,
+          right: -50,
+          position: 'absolute',
+          justifyContent: 'center',
+          alignItems: 'center',
+          height: 105,
+          width: 105,
       }
+
 })
 
